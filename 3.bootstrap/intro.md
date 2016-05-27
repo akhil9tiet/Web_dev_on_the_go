@@ -17,11 +17,15 @@ In earlier lessons, we linked only to main.css. Now, in addition to main.css, we
 
 The HTML link element makes Bootstrap available to us. Remember that the link element is typically contained within HTML head tags.
 
-'<head>'
+'''html
+
+<head>
   ... 
-  '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>'
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
   ...
-'</head>'
+</head>
+
+'''
 
 Above, the href attribute is set to the URL https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css.
 
