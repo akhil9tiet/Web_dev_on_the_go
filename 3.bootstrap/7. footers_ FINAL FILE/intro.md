@@ -57,18 +57,21 @@ Twitter
 <li class="col-sm-1">
   <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
 </li>
+```
 Facebook
-
+```html
 <li class="col-sm-1">
   <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
 </li>
+```
 Instagram
-
+```html
 <li class="col-sm-1">
   <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
 </li>
+```
 Medium
-
+```html
 <li class="col-md-1">
   <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
 </li>
