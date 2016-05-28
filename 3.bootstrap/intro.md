@@ -32,3 +32,17 @@ Above, the href attribute is set to the URL https://maxcdn.bootstrapcdn.com/boot
 Let's explore what Bootstrap can do for us.
 
 _________________________________________________________
+In the diagram, observe the following:
+
+![alt tag](C:\Users\akhgupta\Desktop\web dev\web_dev_projects\3.bootstrap\boostrap image.png)
+
+Bootstrap's grid columns are represented by 12 vertical bars. The boxes represent HTML elements.
+
+The words "container", "jumbotron", "col-sm-6" and "col-sm-3" refer to Bootstrap classes. 
+
+The element with class "jumbotron" spans the entire width of the webpage, beyond the borders of the grid. 
+
+Elements inside the second "container", such as "col-sm-6" and "col-sm-3" are contained within the grid columns. 
+
+Elements labeled "col-sm-3" take up three grid columns; elements labeled "col-sm-6" take up six grid columns.
+Take a moment to familiarize yourself with Bootstrap's grid, then click Next to continue.

@@ -8,12 +8,15 @@ Photographs increase in size when the web browser is toggled to full-width.
 
 Social media icons at the bottom of the webpage appear disorganized.
 Click Run after you have observed these points.
+________________________________________________________________________________
+
 2.
 Now we will connect to Bootstrap and see changes to the webpage layout.
 
 In index.html, locate the head element. Inside head, create a link element to link to Bootstrap:
-
+```html
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+```
 Click Run.
 
 Toggle the web browser's width again to notice the following changes:
