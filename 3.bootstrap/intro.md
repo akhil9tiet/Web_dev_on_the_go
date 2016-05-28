@@ -34,7 +34,7 @@ Let's explore what Bootstrap can do for us.
 _________________________________________________________
 In the diagram, observe the following:
 
-![alt tag](C:\Users\akhgupta\Desktop\web dev\web_dev_projects\3.bootstrap\boostrap image.png)
+![alt tag](C:/Users/akhgupta/Desktop/web dev/web_dev_projects/3.bootstrap/boostrap image.png)
 
 Bootstrap's grid columns are represented by 12 vertical bars. The boxes represent HTML elements.
 
