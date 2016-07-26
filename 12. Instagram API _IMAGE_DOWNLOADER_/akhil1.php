@@ -4,8 +4,8 @@ ini_set('default_socket_timeout',300);
 session_start();
 /*.............Instagram API Keys.............*/
 
-define("clientID",'d86*************************7'); //use your own clientID
-define("clientSecret",'b9******************************d3');// use your own clientSecret
+define("clientID",'d*********************7');
+define("clientSecret",'b********************************************3');
 define("redirectURI",'http://localhost/php_dev_akhil/8.instagramAPI/akhil1.php');
 //Replace this URI with valid website link here and make a new one for the application in validation page on indtagram developer page
 define("imageDirectory",'instaPics/');//create this folder in the same file where we have index.php
@@ -57,7 +57,7 @@ function savePictures($image_url){
     file_put_contents($destination,file_get_contents($search_url));
 }
 
-if($_GET['code']){
+if(@$_GET['code']){
     //logged in
     $code= $_GET['code'];
     $url= "https://api.instagram.com/oauth/access_token";
@@ -106,7 +106,7 @@ if($_GET['code']){
                     </div>
                 </div>
             </section>
-            <!--<a href="https://api.instagram.com/oauth/authorize/?client_id=<?php //echo clientID;?>&redirect_uri=<?php //echo redirectURI;?>&response_type=code">Login Now</a>-->
+            
             <hr>
         </body>
     </html>
