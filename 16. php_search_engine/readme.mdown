@@ -1,0 +1,10 @@
+This is a very crucial project. The universty students so far were not able to search the university research database.
+With my simple application, I have not only made the search easy but also highlt optimized. 
+
+With this new search option, not only can students search for research opportunities within their college, but also can navigate and search opportunities of their interests with the keyword feature.
+
+Thank you for reading.
+
+Enjoy the code.
+
+If you have any doubts, please feel free to email me at akhil9tiet@gmail.com
