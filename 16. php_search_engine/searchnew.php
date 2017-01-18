@@ -1,6 +1,6 @@
 <?php  
-	mysql_connect("vpc-umd-mysql.db.internal.aws.umd.edu:3306", "mskuhn", "qd2CI2jm") or die("couldnot connect");
-	mysql_select_db("UGST") or die("couldnot find db!");
+	mysql_connect("vpc-***-mysql.db.internal.aws.***.***:3306", "*****", "*****") or die("couldnot connect"); //hiding the real server address, db aministrator and password information
+	mysql_select_db("UGST") or die("couldnot find db!"); 
 	$output='';
 
 	//data searching
