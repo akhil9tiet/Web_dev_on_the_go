@@ -1,0 +1,145 @@
+/*Akhil Gupta website CSS file*/
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+.hero{
+	background: url('../img/cover1.jpg') no-repeat center fixed;
+	
+	background-color:#f78181;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: left top;
+	padding:2rem 0 19rem;
+	color: #000;
+}
+
+#highlight {
+    background: rgba(252, 223, 23, 0.9);
+    color:#000;
+    padding: 3px 5px;
+    margin-top: 200px;
+    line-height: 1.7;
+    border-radius: 5px;
+    display:inline;
+}
+
+#block{
+	margin: 20% 0% 0%; 
+	display: block;
+}
+
+.hero h4{
+	font-size: 35px;	
+}
+.hero p{
+	font-size: 20px;
+}
+
+.section{
+	padding:5rem 0 10rem;
+}
+.section-header{
+	/*text-align: center;*/
+	font-size: 40px;
+	margin-bottom: 30px;
+}.header{
+	display: none;
+}
+#nav {
+  /*width: 40%;*/
+	float: right;
+	background-color: rgba(252, 223, 33,0.9);
+	color:#000;
+	margin: 0px 20px 0px 0px ;
+	list-style: none; 
+	position: absolute;
+    top: 50px;
+    right: 0px;
+}
+#nav li {		/*this is making it become horizontal*/
+	float: left; 
+}
+#nav li a { /*spacing and coloring of navbar*/
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	margin:0;
+	color: #000; 
+}
+#nav li a:hover {
+	background-color: rgba(255, 80, 80,0.4);
+	color:#fff;
+	border-radius: 3px;
+}
+/*.navbar{
+	visibility: hidden;
+}*/
+
+.hero h4{
+	font-size: 50px;	
+}
+.hero p{
+	font-size: 30px;
+}
+
+
+
+/*........................Projects......................*/
+.projects{
+  background-image: url('../img/cap.jpg');
+  color:#000;
+  padding-left: 10px;
+}
+
+.section{
+	padding-left:5px;
+}
+.section-header{
+	/*text-align: center;*/
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+
+/*...................Skills........................*/
+.skills .project-tile{
+	
+	color:#f78181;
+}
+#skills{
+	color:#fff;
+}
+
+.skills .project-tile p{
+	padding:10px;
+	text-align: center;
+	font-size: 20px;
+	border-bottom: 1px solid black;
+	color:#f78181;
+}
+
+.tabborder{
+border-style: solid; 
+padding:25px;
+border-color: #ddd;
+background-color: rgba(131,247,222, .7);
+}
+
+.front-end:hover{
+    background-image: url("../img/p1.jpg");
+     text-decoration-color: :#FF5756;
+    text-decoration: 
+}
+
+.back-end:hover{
+    
+    background-image: url("../img/p1.jpg");	
+     text-decoration-color: :#FF5756;
+    text-decoration: 
+}
+
+
+
