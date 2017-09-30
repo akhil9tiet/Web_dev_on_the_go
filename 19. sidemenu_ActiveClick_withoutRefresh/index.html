@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Student Success</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- Morris chart -->
+  <!-- <link rel="stylesheet" href="bower_components/morris.js/morris.css"> -->
+  <!-- jvectormap -->
+  <!-- <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css"> -->
+  <!-- Date Picker -->
+  <!-- <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"> -->
+  <!-- Daterange picker -->
+  <!-- <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css"> -->
+  <!-- bootstrap wysihtml5 - text editor -->
+  <!-- <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+  <header class="main-header">
+    <a href="index2.html" class="logo">
+      <span class="logo-mini">SSO</span>
+      <span class="logo-lg" style="font-size: 12px;">STUDENT SUCCESS OFFICE</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <ul class="sidebar-menu" data-widget="tree" style="font-size:12px;">
+        <li class="header" >STUDENT POLICIES</li>
+        <li class="active" id="SPO"><a href="#SPO"><span>Stuent Policies Overview</span></a></li>
+        <li id="AS"><a href="#AS"><span>Academic Standing</span></a></li>
+        <li id="GE"><a href="#GE"><span>General Education</span></a></li>
+        <li id="AP"><a href="#AP"><span>Academic Plan</span></a></li>
+        <li id="CR"><a href="#CR"><span>Course Related</span></a></li>
+        <li id="AP1"><a href="#AP1"><span>Academic Probation</span></a></li>
+        <li id="AD"><a href="#AD"><span>Academic Dismissal</span></a></li>
+        <li id="DD"><a href="#DD"><span>Dismissal Decisions</span></a></li>
+        <li id="RC"><a href="#RC"><span>Repeating Courses</span></a></li>
+        <li id="WLA"><a href="#WLA"><span>Withdrawal &amp; Leave of Abscence</span></a></li>
+        <li id="AC"><a href="#AC"><span>Academic Clemency</span></a></li>
+        <li id="RD"><a href="#RD"><span>Re-enrollment Deadlines</span></a></li>
+        <li id="RF"><a href="#RF"><span>Re-enrollment FAQs</span></a></li>
+      </ul>
+    </section>
+  </aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper"></div>
+</div>
+
+<script>
+  var selector = '.sidebar-menu li';
+  var content_id = '';
+  $(selector).on('click', function(){
+     var id = $(this).attr('id');
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+    $(".content-wrapper").load("./assets/includes/"+id+".html");
+  });
+</script>
+
+<script src="dist/js/adminlte.min.js"></script>
+</body>
+</html>
