@@ -1,0 +1,1 @@
+Your video goes in the ```library/video/``` folder
