@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+  <style>
+    .treeview-menu{
+        background-color: #3b3b3b;
+    }.active{
+      /*background-color: #dd4b39;*/
+      background-color: #dd4b39;
+      color:#3b3b3b;
+      text-decoration: underline;
+    }
+
+    .treeview :hover{
+      background-color: #f4f4f5;
+      color:#3b3b3b;
+    }
+      .treeview-menu :hover{
+      background-color: #dd4b39;
+      color:#3b3b3b;
+      text-decoration: underline;
+    }
+    span.newline{
+      display:block;
+    }
+  </style>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+</head>
+<body class="hold-transition skin-red-light sidebar-mini">
+<div class="wrapper">
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <span class="logo-mini">SSO</span>
+      <span class="logo-lg" style="font-size: 12px;">STUDENT SUCCESS OFFICE</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only"></span>
+      </a>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <section class="sidebar">
+     <ul class="sidebar-menu" data-widget="tree">
+        <li id="About" class="treeview"><a href="#"><span>About</span></a></li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-graduation-cap"></i>
+            <span>Policies</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active" id="StuentPoliciesOverview"><a href="#"><span>Stuent Policies Overview</span></a></li>
+            <li id="AcademicStanding"><a href="#AS1">Academic Standing</a></li>
+            <li id="GeneralEducation"><a href="#GE1">General Education</a></li>
+            <li id="AcademicPlan"><a href="#AP1">Academic Plan</a></li>
+            <li id="CourseRelated"><a href="#CR1">Course Related</a></li>
+            <li id="AcademicProbation"><a href="#AP11">Academic Probation</a></li>
+            <li id="AcademicDismissal"><a href="#AD1">Academic Dismissal</a></li>
+            <li id="DismissalDecisions"><a href="#DD1">Dismissal Decisions</a></li>
+            <li id="RepeatingCourse"><a href="#RC1">Repeating Course</a></li>
+            <li id="WithdrawlandLeaveofAbscence"><a href="#WLA1">Withdrawl and Leave of Abscence</a></li>
+            <li id="AcademicClemency"><a href="#AC1">Academic Clemency</a></li>
+            <li id="ReenrollmetDeadlines"><a href="#RD1">Reenrollmet Deadlines</a></li>
+            <li id="ReenrollmentFAQs"><a href="#RF1">Reenrollment FAQs</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-wrench"></i>
+            <span>Resources</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li id="AcademicAdvising"><a href="#AA2"><span>Academic Advising</span></a></li>
+            <li id="AcademicAdvisingFAQs"><a href="#AAF2">Academic Advising FAQs</a></li>
+            <li id="AcademicProbation"><a href="#AP2">Academic Probation</a></li>
+            <li id="AcademicSupportServices"><a href="#ASS2">Academic Support Services</a></li>
+            <li id="TutoringServices"><a href="#TS2">Tutoring Services</a></li>
+            <li id="FinancialResources"><a href="#FR2">Financial Resources</a></li>
+            <li id="HealthAndWellness"><a href="#HAW2">Health &amp; Wellness</a></li>
+            <li id="CampusLife"><a href="#CL2">Campus Life</a></li>
+            <li id="CareerPlanning"><a href="#CP2">Career Planning</a></li>
+            <li id="ServiceOpportunities"><a href="#SO2">Service Opportunities</a></li>
+            <li id="UndocumentedStudentResources"><a href="#USR2">Undocumented Student Resources</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-vcard-o"></i>
+            <span>Advisors/Faculty</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li id="AdvisingPolicies"><a href="#AP3"><span>Advising Policies</span></a></li>
+            <li id="AcademicClemency"><a href="#AC3">Academic Clemency</a></li>
+            <li id="AdvisingNotes"><a href="#AN3">Advising Notes</a></li>
+            <li id="HelpfulWebsites"><a href="#HW3">Helpful Websites</a></li>
+            <li id="TipsForAdvisingAcademicallyDismissedStudents"><a href="#TFAADS">Tips for Advising Academically<span class="newline">Dismissed Students</span></a></li>
+            <li id="ReenrollmentProcess"><a href="#RP3">Reenrollment Process</a></li>
+            <li id="Presentations"><a href="#P3">Presetations</a></li>
+            <li id="AdvisingConference"><a href="#AC3">Advising Conference</a></li>
+            <li id="UndocumentedStudentResources"><a href="#USR4">Undocumented Student Resources</a></li>
+            <li id="TeachingAndLearningTransformationCenter"><a href="#TLTC3">Teaching &amp; Learning <span class="newline">Transformation Center</span></a></li>
+            <li id="LiteratureOnStudentSuccess"><a href="#LOSS3">Literature on Student Success</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-stop-circle-o"></i>
+            <span>Academic Probation</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li id="AcademicAdvising"><a href="#AA4">Academic Advising</a></li>
+            <li id="AcademicAdvisingFAQs"><a href="#AAF4">Academic Advising FAQs</a></li>
+            <li id="AcademicSupportServices"><a href="#ASS4">Academic Support Services</a></li>
+            <li><a href="http://www.tutoring.umd.edu">Tutoring Services</a></li>
+            <li id="FinancialResources"><a href="#FR4">Financial Resources</a></li>
+            <li id="RepeatingCourses"><a href="#RC4">Repeating Courses</a></li>
+            <li id="WithdrawalOnProbation"><a href="#WOP4">Withdrawal on Probation</a></li>
+            <li id="ApplyForReenrollment"><a href="#AFR4">Apply for Reenrollment</a></li>
+            <li id="AdvisingPolicies"><a href="#AP4">Advising Policies</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>Reenrollment</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li id="ReenrollmentTools"><a href="#RT">Reenrollment Tools</a></li>
+            <li id="IWasAcademicallyDismissed"><a href="#IWAD">I was Academically Dismissed</a></li>
+            <li id="IWasOnAcademicProbation"><a href="#IWOAP">I was on academic probation</a></li>
+            <li id="IWithdrewOrTookALeaveOfAbsence"><a href="#IWOTALOA">I withdrew or took a <span class="newline">leave of absence</span></a></li>
+            <li id="IEarnedADegreeFromUMD"><a href="#IEADFUMD">I earned a degree from UMD</a></li>
+            <li id="IReceivedAPastDecision"><a href="#IRAPD">I received a past decision</a></li>
+            <li id="ILeftWithA2GPAOrAbove"><a href="#ILWA2GOA">I left with a 2.00 GPA or above</a></li>
+            <li id="ReenrollmentFAQs"><a href="#ReF5">Reenrollment FAQs</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-group"></i>
+            <span>Parents/Family</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li id="ResourcesForParentsAndFamily"><a href="#RFPA">Resources for Parents &amp; Family</a></li>
+            <li id="ParentsAndFamilyFAQs"><a href="#FF6">Parents &amp; Family FAQs</a></li>
+          </ul>
+        </li>
+      </ul>
+     </section>
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+      <!--#include virtual="./assets/includes/"+<script>document.title</script>+".html" -->
+    </section>
+  </div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+<script>
+$( document ).ready(function() {
+  $(".sidebar").load("./assets/includes/sidemenu.html");
+});
+</script>
+
+<!-- Slimscroll -->
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+</body>
+</html>

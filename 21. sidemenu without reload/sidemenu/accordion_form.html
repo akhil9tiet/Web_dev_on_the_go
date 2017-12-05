@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</head>
+<body style="padding:30px;">
+  <div class = "calculator">
+  <div class="container">
+    <div class = "row">
+
+        <div class="col-md-6">
+          <form id="gpaform" name="gpaform">
+            <p class="label">Number of <span class="bold">Attempted </span> (not earned) credits<input type="text" name="cred" class="input" id="cred"></p><br>
+
+            <p class="label">Cumulative GPA</p><input type="text" name="gpa" class="input" id="gpa"><br><br>
+            <input type="submit" value="Calculate" id = "gpa_submit">
+          </form>
+        </div>
+        <div class="col-md-4 offset-md-2">
+          <div class="results" style="border-style: solid;border-width:4px; border-color:#4f4f4f;">
+            <div class="content_header"style="background-color:#4f4f4f; color:#fff;"> To raise my GPA to a 2.0, I need...</div>
+            <br>
+            <div class="numbers" style="padding:10px;">
+              <p><span id="275" class="cred_results"></span> credits at a 2.75 GPA</p>
+              <p><span id="250" class="cred_results"></span> credits at a 2.50 GPA</p>
+              <p><span id="225" class="cred_results"></span> credits at a 2.25 GPA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  var validator = $("#gpaform").validate({
+  		rules: {
+  			cred: {
+  				required: true,
+  				number: true,
+  				range: [0,999]
+  			},
+  			gpa: {
+  				required: true,
+  				number: true,
+  				range: [0,2]
+  			}
+  		},
+  		messages: {
+  			cred:{
+  				required: "Please enter your number of attempted credits",
+  				number: "Please enter a number",
+  				range: "Please enter a number between 0 and 999",
+  			},
+              gpa: {
+                  required: "Please enter your cumulative GPA",
+                  number: "Please enter a number",
+  				range: "Please enter a number between 0 and 2.0",
+              }
+  		},
+
+  		submitHandler: function(form) {
+  			var cred = document.getElementById("cred").value;
+  					var gpa = 	document.getElementById("gpa").value;
+  					var a = Math.ceil(((2*cred) - (gpa * cred))/.75);
+  					var b = Math.ceil(((2*cred) - (gpa * cred))/.5);
+  					var c = Math.ceil(((2*cred) - (gpa * cred))/.25);
+
+  					$('#275').html(a);
+  					$('#250').html(b);
+  					$('#225').html(c);
+
+  					$('.cred_results').css('color', 'red');
+
+  		}
+  	});
+  </script>
+</body>
+</html>

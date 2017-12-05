@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+  <form action="" method="post" clas="ajax">
+    <input type="text" name="cred"  id="cred" placeholder="Credits">
+    <input type="text" name="gpa"  id="gpa" placeholder="GPA">
+    <input type="submit" value="Submit">
+  </form>
+  <div class="results" style="border-style: solid;border-width:4px; border-color:#4f4f4f;">
+    <div class="content_header"style="background-color:#4f4f4f; color:#fff;"> To raise my GPA to a 2.0, I need...</div>
+    <br>
+    <div class="numbers" style="padding:10px;">
+      <p><span id="275" class="cred_results"></span> credits at a 2.75 GPA</p>
+      <p><span id="250" class="cred_results"></span> credits at a 2.50 GPA</p>
+      <p><span id="225" class="cred_results"></span> credits at a 2.25 GPA</p>
+    </div>
+  </div>
+  <script>
+    $('form.ajax').on('submit',function(){
+      var that = $(this),
+          url= that.attr('action'),
+          method=that.atr('method'),
+          data={};
+          var cred = document.getElementById("cred").value;
+					var gpa = 	document.getElementById("gpa").value;
+					var a = Math.ceil(((2*cred) - (gpa * cred))/.75);
+					var b = Math.ceil(((2*cred) - (gpa * cred))/.5);
+					var c = Math.ceil(((2*cred) - (gpa * cred))/.25);
+
+					$('#275').html(a);
+					$('#250').html(b);
+					$('#225').html(c);
+
+					$('.cred_results').css('color', 'red');
+
+    that.find('[name]').each(function(index, value){
+      var that = $(this),
+          name =  that.attr('name'),
+          value = that.val();
+
+          data[name] = value;
+    });
+
+      console.log(data);
+      return false;
+
+    });
+  </script>
+</body>
+</html>

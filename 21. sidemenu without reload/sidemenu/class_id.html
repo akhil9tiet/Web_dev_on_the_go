@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      body{
+        background-color: #fcf113;
+        color:#bbb;
+      }
+      .test #d1 {
+        background-color: #efefef;
+        color:#000;
+
+      }
+      .test #d1 :hover{
+        background-color: #bbb;
+        color:#fcf113;
+
+      }
+      .active{
+        background-color: #ff0000;
+        font-size: 40px;
+      }
+    </style>
+</head>
+<body>
+<h1>This is not very fancy.</h1>
+<div class= "test">
+  <div id ="d1" class="active">
+    <h2> Coolish Overkill </h2>
+  </div>
+  <div id ="d2">
+    <h2> Rickididuff </h2>
+  </div>
+  <div id ="d3">
+    <h2> And that is how the news goes </h2>
+  </div>
+</div>
+
+<script>
+var selector = '.sidebar-menu li';
+var content = '.contnent';
+$(selector).on('click', function(){
+   var id = $(this).attr('id');
+   //window.alert(id);
+  $(selector).removeClass('active');
+  $(this).addClass('active');
+
+  $(content)
+
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Student Success</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- <link rel="stylesheet" href="dist/css/skins/sso.css"> -->
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+</head>
+
+<body class="hold-transition skin-red-light sidebar-mini">
+  <div class="container">
+     <div class="row"><!--UMD header-->
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+       <script src="//s3.amazonaws.com/umdheader.umd.edu/app/js/main.min.js"></script>
+       <script> umdHeader.init({ news: false }); </script>
+     </div>
+     <div class="col-md-12">
+      <div id="header"></div>
+     </div>
+   </div>
+ </div><!--/UMD header-->
+
+<div class="wrapper">
+  <header class="main-header">
+    <a href="index2.html" class="logo">
+      <span class="logo-mini">SSO</span>
+      <span class="logo-lg" style="font-size: 12px;">STUDENT SUCCESS OFFICE</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <ul class="sidebar-menu" data-widget="tree" style="font-size:12px;">
+        <li class="header" >STUDENT POLICIES</li>
+        <li class="active" id="SPO"><a href="#SPO"><span>Stuent Policies Overview</span></a></li>
+        <li id="AS"><a href="#AS"><span>Academic Standing</span></a></li>
+        <li id="GE"><a href="#GE"><span>General Education</span></a></li>
+        <li id="AP"><a href="#AP"><span>Academic Plan</span></a></li>
+        <li id="CR"><a href="#CR"><span>Course Related</span></a></li>
+        <li id="AP1"><a href="#AP1"><span>Academic Probation</span></a></li>
+        <li id="AD"><a href="#AD"><span>Academic Dismissal</span></a></li>
+        <li id="DD"><a href="#DD"><span>Dismissal Decisions</span></a></li>
+        <li id="RC"><a href="#RC"><span>Repeating Courses</span></a></li>
+        <li id="WLA"><a href="#WLA"><span>Withdrawal &amp; Leave of Abscence</span></a></li>
+        <li id="AC"><a href="#AC"><span>Academic Clemency</span></a></li>
+        <li id="RD"><a href="#RD"><span>Re-enrollment Deadlines</span></a></li>
+        <li id="RF"><a href="#RF"><span>Re-enrollment FAQs</span></a></li>
+      </ul>
+    </section>
+  </aside>
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <div class="col-md-8 col-lg-8">
+    						<h1 align="center">Overview of Student Policies</h1>
+    						<p>In this section, a variety of University policies and academic regulations are highlighted to support your academic journey towards graduation. Make sure to familiarize yourself with this information early on in your academic career and prior to applying for reenrollment.</p>
+    						<p>To find complete information pertaining to undergraduate academic programs, including course descriptions and program requirements, and the university's academic, registration and graduation policies and regulations, see the <a href="http://www.umd.edu/catalog/index.cfm">Undergraduate Catalog</a>.</p>
+    						<p>If you cannot find the policy or academic regulation you need in this section, make sure to meet with your <a href="academicadvising.html">academic advisor</a>.</p>
+    						<br>
+    	</div>
+  </div>
+</div>
+
+<script>
+  var selector = '.sidebar-menu li';
+  var content_id = '';
+  $(selector).on('click', function(){
+     var id = $(this).attr('id');
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+    $(".content-wrapper").load("./assets/includes/"+id+".html");
+  });
+</script>
+
+<script src="dist/js/adminlte.min.js"></script>
+
+<footer style="background-color:#393e46;margin:0px; padding:0px;color:#fff;">
+			<div id="footer">
+				<!--footer contents -->
+
+<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-4 col-xs-12 fh5co-footer-link">
+							<h3>Contact Us</h3>
+		<form id="contact_form" name="contact_form" method="post" action="/index.html">
+
+				<div class="name_div">
+
+					<label for="name">Name</label></br>
+
+					<input type="text" name="name" id="name" value="" class="required" role="input" aria-required="true">
+
+				</div>
+
+				<div class="uid_div" >
+
+					<label for="uid">UID Number</label></br>
+
+					<input type="text" name="uid" id="uid" value="" class="required" role="input" aria-required="true">
+
+				</div>
+
+				<div class="email_div">
+
+					<label for="email">Email</label></br>
+
+					<input type="text" name="email" id="email" value="" class="required email" role="input" aria-required="true" />
+
+				</div>
+
+				<div class="message_div">
+
+					<label for="message">Message</label></br>
+
+					<textarea id="message" name="message" value="" class="required" role="textbox" aria-required="true"></textarea>
+
+				</div>
+
+				<input type="submit" value="Send" name="submit" id="submit" title="Click here to submit your message!">
+
+				<a class="email_link" href="mailto:rr-admit@umd.edu?uid=Reenrollment Question"></a>
+
+			</form>
+
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-12 fh5co-footer-link">
+							<h3>Reenrollment Deadlines</h3>
+							<table border="1" style="color:rgba(255,255,241,1.00) !important; font-weight:400 !important;  font-size:1.0em;">
+
+						<tr style="color:rgba(255,255,241,1.00) !important; font-weight:400 !important; font-size:1.0em;">
+
+							<th><div align="center" >Prospective Semester</div></th>
+
+							<th><div align="center" >Primary Deadline</div></th>
+
+							<th> <div align="center" >Dismissed  from Current Semester</div></th>
+
+						</tr>
+
+						<tr style="color:rgba(255,255,241,1.00) !important; font-weight:400 !important;  font-size:1.0em;">
+
+							<th><div align="center" >Fall 2017</div></th>
+
+							<td><div align="center" >April 1</div></td>
+
+							<td><div align="center" >June  1</div></td>
+
+						</tr>
+
+						<tr style="color:rgba(255,255,241,1.00) !important; font-weight:400 !important; font-size:1.0em;">
+
+							<th><div align="center" >Spring 2018</div></th>
+
+							<td><div align="center" >November 1</div></td>
+
+							<td><div align="center" >January 5</div></td>
+
+						</tr>
+
+				</table>
+
+						</div>
+						<div class="col-md-4 col-sm-4 col-xs-12 fh5co-footer-link">
+
+							<h3 align="center">Student Success Tweets</h3>
+
+		  <a class="twitter-timeline" href="https://twitter.com/SSO_UMD" data-widget-id="699969208914944000">Tweets by @SSO_UMD</a>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+						</div>
+
+
+
+					</div>
+					<div class="row">
+						<div class="col-md-7 col-md-offset-2 text-center">
+<p align="center"><img src="../images/studentsuccessugstumdlogo-white90high copy.png" width="491" height="90" alt="UMD Student Success Office logo"/></p>
+<p>Student Success Office, 0110 Hornbake Library South (Bldg. 147), 4130 Campus Dr., College Park, MD 20742</p>
+<p class="fh5co-social-icons">
+								<a href="#"><i class="icon-twitter2"></i> Twitter</a>&nbsp;&nbsp;<a href="#"><i class="icon-facebook2"></i> Facebook</a><br>
+								<a href="https://www.umd.edu/web-accessibility" title="University of Maryland Web Accessibility" target="_blank" style="text-decoration: underline;">Web Accessibility</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+<!--/footer contents -->
+			</div>
+		</footer>
+</body>
+</html>

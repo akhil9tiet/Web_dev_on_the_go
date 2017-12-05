@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<style>
+  .cred_results{
+    display:block;
+    float:left;
+    border-bottom:1px solid #54514b;
+    width:40px;
+    height:14px;
+    margin-right:8px;
+    /*padding-bottom:10px;*/
+    padding-left:18px;
+  }
+</style>
+
+  </head>
+  <body>
+    <div id="accordion" role="tablist">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <p>If you were academically dismissed from the University, you must apply and be approved for reinstatement before returning. You must submit a completed reinstatement application, including the required essays, transcripts from coursework taken elsewhere since dismissal, and any optional supplemental information that will be helpful to the your application, before the application deadline.</p>
+
+		<p>You should also carefully consider whether you are ready to return to the University prior to applying for reinstatement. The Faculty Petition Board often requires students to enroll elsewhere and earn a minimum GPA/credit level before applying again. Many times the board believes it is in the student’s best interest to pursue a degree elsewhere.</p>
+
+		<p>If you are reinstated, you must earn a cumulative grade point average of 2.0 by the end of your first semester of reinstatement or you will be academically dismissed again. Visit the <a href = "https://catalogundergraduate.umd.edu/files/2017-2018-UGCatalog.pdf" target="blank"> Undergraduate Catalog </a> for additional information about the Academic Probation and Dismissal policy.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        <p>Please visit your <a href="http://www.registrar.umd.edu/current/">student account</a> to determine if you have any registration blocks. Your application cannot move forward in the review process if you have a judicial or financial block. Contact the <a href="http://www.oit.umd.edu/password/">Division of Information Technology</a> if your password has expired.</p>
+
+		<h2> Judicial Blocks </h2>
+		<p>If you have a judicial ineligibility block, or if you answered yes to a question in the Character and Conduct section on the reenrollment application, please visit <a href="http://osc.umd.edu/OSC/ProspectiveStudents.aspx">the Office of Student Conduct website</a> for instructions on obtaining judicial clearance. It is the student's responsibility to initiate this process by completing the Social Clearance form found on the Office of Student Conduct website. Students must attach the necessary documentation for both past disciplinary and past criminal history, as outlined in the Social Clearance form.</p>
+		<h2> Financial Blocks </h2>
+		<p>If you have a financial ineligibility block, please contact the <a href="https://bursar.umd.edu/">Office of the Bursar</a> to obtain a financial clearance slip. Please submit the original clearance slip from the Office of the Bursar to the following address: 0110 Hornbake Library South, College Park, MD 20742.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        <p>The Faculty Petition Board reviews the number of credits you must earn to raise your GPA to a 2.00. If you have not demonstrated the ability to earn the required number of credits with a high enough GPA, you may want to consider taking courses at another institution before applying for reinstatement.</p>
+		<p>If you have below a 2.00 GPA, please use the GPA calculator below to determine how many credits you must earn to raise your GPA.</p>
+
+    <div class="container">
+      <div class = "row">
+        <div class = "calculator">
+          <div class="col-md-4">
+            <form id="gpaform" name="gpaform">
+					    <p class="label">Number of <span class="bold">Attempted </span> (not earned) credits<input type="text" name="cred" class="input" id="cred"></p><br>
+					    <p class="label">Cumulative GPA</p><input type="text" name="gpa" class="input" id="gpa"><br><br>
+				      <input type="submit" value="Calculate" id = "gpa_submit">
+				    </form>
+          </div>
+          <div class="col-md-4 offset-md-4">
+				    <div class="results" style="border-style: solid;border-width:4px; border-color:#4f4f4f;">
+					    <div class="content_header"style="background-color:#4f4f4f; color:#fff;"> To raise my GPA to a 2.0, I need...</div>
+              <br>
+					    <div class="numbers" style="padding:10px;">
+    						<p><span id="275" class="cred_results"></span> credits at a 2.75 GPA</p>
+    						<p><span id="250" class="cred_results"></span> credits at a 2.50 GPA</p>
+    						<p><span id="225" class="cred_results"></span> credits at a 2.25 GPA</p>
+					    </div>
+				    </div>
+          </div>
+        </div>
+      </div>
+		</div>
+  </div>
+</div>
+</div>
+  <!--......................-->
+  <div class="card">
+    <div class="card-header" role="tab" id="headingFour">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Collapsible Group Item #4
+        </a>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body">
+        <p>All degree-seeking students at the University of Maryland are expected to make progress toward earning their degrees. The <a href="http://www.ugst.umd.edu/academicsuccess.html">Student Academic Success-Degree Completion Policy</a> establishes a structured framework and criteria to guide all students to completion of an undergraduate degree within a reasonable period of time. If a reinstated student is not making progress set forth in the policy or has violated the repeat policy, he or she may be required to select a new major before being approved for reinstatement.</p>
+		<h2> Returning to Your Previous Major </h2>
+		<p>The Student Success Office will contact the college offering your desired major to determine your eligibility to return to the major. You may receive notice that you must change your major if you have not met <a href = "http://www.4yearplans.umd.edu/">benchmarks</a> or <a href="http://www.lep.umd.edu/">LEP gateway courses</a> or you have violated the <a href="https://catalogundergraduate.umd.edu/files/2017-2018-UGCatalog.pdf">repeat policy</a>. These students will not be reenrolled until they have met with an academic advisor from a different major and developed a new graduation/four-year plan.</p>
+
+		<h2> Changing Your Major </h2>
+		<p>If you need to complete a major change please be aware that this can take several weeks to process; this does not need to be done before you apply, but you may want to start the process as soon as possible. As each major has unique requirements (typically outlined on the department's website) we suggest you start this process early so we can review your application in a timely manner.  Please note that approval to change your major does NOT guarantee your ability to return to the University.</p>
+
+		<h3>Limited Enrollment Programs</h3>
+		<p class="belowh3">If you want to change your major to one of the following programs, the Student Success Office will contact the LEP Admissions office to verify your eligibility. Please note that you will need to meet the <a href="http://www.lep.umd.edu/">LEP requirements</a> and <strong> may</strong> be required to complete a separate application.</p>
+		<ul id="leps">
+		  <li><a href="http://www.lep.umd.edu/bmgt-lep.pdf">Business</a></li>
+		  <li><a href="http://www.lep.umd.edu/cmns-lep.pdf">Biological Sciences, Biochemistry, Chemistry and Environmental Sciences and Policy-Biodiversity and Conservation</a></li>
+		  <li><a href="http://www.lep.umd.edu/comm-lep.pdf"> Communication</a></li>
+		  <li><a href="http://www.lep.umd.edu/ccjs-lep.pdf"> Criminology and Criminal Justice </a></li>
+		  <li><a href="http://www.lep.umd.edu/engr-lep.pdf"> Engineering</a></li>
+		  <li><a href="http://www.lep.umd.edu/gvpt-lep.pdf"> Government and Politics</a></li>
+		  <li><a href="http://www.lep.umd.edu/jour-lep.pdf">Journalism</a></li>
+		  <li><a href="http://www.lep.umd.edu/psyc-lep.pdf">Psychology (Students who matriculated to the University System of Maryland in Fall 2013 and after)</a></li>
+		</ul>
+
+		<h3>All Other Majors</h3>
+		<p class="belowh3"> You can view a <a href="http://www.admissions.umd.edu/academics/Majors.php#a">list of majors</a> on the UMD website.		  </p>
+		<p class="belowh3">If you want to change your major to a program not listed above, you must submit proof that you have permission to change your major. To do so, please have an <br> <a href="http://studentsuccess.umd.edu/studentresources/academicadvising.php">academic advisor</a> from your desired college do the following two things:</p>
+		<ol>
+			<li>Send an email to <a href="mailto:rr-admit@umd.edu">rr-admit@umd.edu</a> granting you permission to change your major.</li>
+			<li>Add a note to the Student Information System (SIS) granting you permission to change your major.</li>
+		</ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" role="tab" id="headingFive">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Collapsible Group Item #5
+        </a>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" role="tab" id="headingSix">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Collapsible Group Item #5
+        </a>
+      </h5>
+    </div>
+    <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" role="tab" id="headingSeven">
+      <h5 class="mb-0">
+        <a class="collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Collapsible Group Item #5
+        </a>
+      </h5>
+    </div>
+    <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+  <!--......................-->
+</div>
+
+<script>
+var validator = $("#gpaform").validate({
+		rules: {
+			cred: {
+				required: true,
+				number: true,
+				range: [0,999]
+			},
+			gpa: {
+				required: true,
+				number: true,
+				range: [0,2]
+			}
+		},
+		messages: {
+			cred:{
+				required: "Please enter your number of attempted credits",
+				number: "Please enter a number",
+				range: "Please enter a number between 0 and 999",
+			},
+            gpa: {
+                required: "Please enter your cumulative GPA",
+                number: "Please enter a number",
+				range: "Please enter a number between 0 and 2.0",
+            }
+		},
+
+		submitHandler: function(form) {
+			var cred = document.getElementById("cred").value;
+					var gpa = 	document.getElementById("gpa").value;
+					var a = Math.ceil(((2*cred) - (gpa * cred))/.75);
+					var b = Math.ceil(((2*cred) - (gpa * cred))/.5);
+					var c = Math.ceil(((2*cred) - (gpa * cred))/.25);
+
+					$('#275').html(a);
+					$('#250').html(b);
+					$('#225').html(c);
+
+					$('.cred_results').css('color', 'red');
+
+		}
+	});
+</script>
+  </body>
+</html>
